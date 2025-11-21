@@ -6,7 +6,7 @@ export default function Header() {
   return (
     <section
       aria-label="Hero section introducing the bourbon app"
-      className="flex flex-col items-center justify-center h-screen text-center px-6 md:px-12 relative overflow-hidden"
+      className="flex flex-col items-center justify-center h-screen text-center px-4 md:px-12 relative overflow-hidden"
       style={{
         background:
           "radial-gradient(circle, rgba(200,145,51,0.15) 0%, transparent 70%)",
@@ -56,7 +56,7 @@ export default function Header() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1.6, delay: 2, ease: "easeOut" }}
-        className="mt-20 md:mt-15 z-10"
+        className="mt-18 md:mt-15 z-10"
       >
         <Button >Explore Collection</Button>
         
@@ -70,7 +70,7 @@ export default function Header() {
         initial={{ opacity: 0, y: "-20%" }}
         animate={{ opacity: 0.18, y: "0%" }}
         transition={{ delay: 3, duration: 2, ease: "easeOut" }}
-        className="absolute top-0 left-1/2 transform -translate-x-1/2 h-[75%] md:h-full max-w-none opacity-20 pointer-events-none select-none z-0 rounded-md drop-shadow-lg ml-[55%] md:ml-[20%]"
+        className="absolute top-0 left-1/2 transform -translate-x-1/2 h-[75%] md:h-full max-w-none opacity-20 pointer-events-none select-none z-0 rounded-md drop-shadow-lg ml-[53%] md:ml-[20%]"
       />
     </section>
   );

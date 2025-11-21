@@ -16,7 +16,7 @@ export default function Button({ children, ...props }: ButtonProps) {
   relative overflow-hidden rounded-md border border-(--primary-color)/60
   bg-transparent text-(--bg-color) font-semibold tracking-wide px-10 py-3
   cursor-pointer select-none transition-colors duration-1200 ease-in-out
-  w-[350px] md:w-auto
+  w-[330px] md:w-auto
 
   ${hovered ? "text-(--primary-color)" : "text-(--bg-color)"}
 `}

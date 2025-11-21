@@ -193,7 +193,7 @@ export default function Navbar({ isVintage, toggleTheme }: NavbarProps) {
                 type="button"
                 aria-label="Toggle Theme"
                 onClick={toggleTheme}
-                className="p-2 cursor-pointer"
+                className=" cursor-pointer"
               >
                 {isVintage ? <BiSun size={26} /> : <BiMoon size={26} />}
               </button>
