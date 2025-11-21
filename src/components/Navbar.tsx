@@ -132,6 +132,7 @@ export default function Navbar({ isVintage, toggleTheme }: NavbarProps) {
         <button
           type="button"
           aria-label="Toggle menu"
+          aria-expanded={menuOpen}
           onClick={() => setMenuOpen(!menuOpen)}
           className="md:hidden nav-link p-2 rounded-md hover:border-primary-color-glow hover:text-primary-color transition duration-500 ease-in-out cursor-pointer"
         >
@@ -149,7 +150,7 @@ export default function Navbar({ isVintage, toggleTheme }: NavbarProps) {
             animate="visible"
             exit="hidden"
             // Change to fixed positioning and very high z-index so it overlays everything
-            className="fixed top-16 left-0 right-0 bg-(--glass-bg) backdrop-blur-md flex flex-col px-6 py-5 md:hidden shadow-lg z-[9999]"
+            className="fixed top-16 left-0 right-0 bg-(--glass-bg) backdrop-blur-md flex flex-col px-6 py-5 md:hidden shadow-lg z-9999"
           >
             {navbarLinks.map(({ label, href }) => (
               <motion.li
