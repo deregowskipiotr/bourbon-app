@@ -1,0 +1,127 @@
+@import "tailwindcss";
+
+@tailwind utilities;
+
+/* Optional: force fallback fonts for safety */
+.font-cormorant {
+  font-family: "Cormorant", serif;
+}
+
+.font-raleway {
+  font-family: "Raleway", sans-serif;
+}
+
+/* Default: Dark Bourbon Barrel Theme */
+:root {
+  --bg-color: #050505;
+  --text-primary: #E0E0E0;
+  --text-secondary: #A0A0A0;
+  --primary-color: #C89133; /* Whisky Amber */
+  --primary-color-glow: rgba(200, 145, 51, 0.45); /* Semi-transparent warm glow */
+  --secondary-color: #FF3C78; /* Neon Pink for accent */
+  --glass-bg: rgba(255, 255, 255, 0.05);
+  --glass-border: rgba(255, 255, 255, 0.15);
+}
+
+.app-root {
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  min-height: 100vh; /* full viewport height */
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+
+/* Vintage Theme */
+.theme-vintage {
+  --bg-color: #f9f3e7;
+  --text-primary: #5b4330;
+  --text-secondary: #8d7a5e;
+  --primary-color: #a87b40; /* Muted gold */
+  --primary-color-glow: rgba(168, 123, 64, 0.45);
+  --secondary-color: #b36850; /* Muted clay */
+  --glass-bg: rgba(255, 255, 255, 0.6);
+  --glass-border: rgba(255, 255, 255, 0.3);
+}
+
+/* Base styles */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+/* Headings with Cormorant and warm glow */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Cormorant', serif;
+  color: var(--text-primary);
+  text-shadow: 0 0 8px var(--primary-color), 0 0 20px var(--primary-color);
+}
+
+.nav-link {
+  
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  transition: color 0.5s ease, border-color 0.5s ease;
+  border: 1px solid transparent;
+}
+
+.nav-link:hover {
+  color: var(--primary-color); /* on hover, text changes to neon pink */
+  
+}
+
+
+/* Primary button style */
+.button-primary {
+  background-color: var(--primary-color);
+  color: var(--bg-color);
+  border: 2px solid var(--primary-color);
+  box-shadow: 0 0 8px var(--primary-color), 0 0 20px var(--primary-color);
+  padding: 0.5rem 1.25rem;
+  border-radius: 5px; /* Tailwind rounded-md */
+  font-weight: 600;
+  cursor: pointer;
+  /* Transition omitted - add via Tailwind in components */
+}
+
+.button-primary:hover {
+  background-color: var(--bg-color);
+  color: var(--primary-color);
+  box-shadow: 0 0 8px var(--primary-color), 0 0 12px var(--primary-color);
+}
+
+/* Neon pink border for cards or highlights */
+.border-secondary {
+  border: 2px solid var(--secondary-color);
+  box-shadow: 0 0 8px var(--secondary-color), 0 0 20px var(--secondary-color);
+  border-radius: 5px; /* Tailwind rounded-md */
+}
+
+/* Secondary text color */
+.text-secondary {
+  color: var(--text-secondary);
+}
+
+/* Glassmorphic Base Style */
+.glassmorphic {
+  background: var(--glass-bg);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  border-radius: 5px; /* Tailwind rounded-md */
+  border: 1px solid var(--glass-border);
+  box-shadow: none;
+  /* Transition omitted - add via Tailwind in components */
+}
+
+/* Soft warm accent border on hover */
+.glassmorphic:hover {
+  border-color: var(--primary-color-glow);
+  box-shadow: 0 0 2px var(--primary-color-glow), 0 0 6px var(--primary-color-glow);
+  cursor: pointer;
+}
+
+/* Secondary variant hover - muted clay glow */
+.glassmorphic.secondary:hover {
+  border-color: rgba(179, 104, 80, 0.45);
+  box-shadow: 0 0 2px rgba(179, 104, 80, 0.45), 0 0 6px rgba(179, 104, 80, 0.45);
+}
